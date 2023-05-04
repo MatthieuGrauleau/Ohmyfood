@@ -1,0 +1,22 @@
+{
+  "name": "projet4bis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatthieuGrauleau/Ohmyfood.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatthieuGrauleau/Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/MatthieuGrauleau/Ohmyfood#readme",
+  "dependencies": {
+    "sass": "^1.62.1"
+  }
+}
