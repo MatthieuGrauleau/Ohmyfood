@@ -17,10 +17,19 @@ h2 {
   font-size: 24px;
 }
 
+h3 {
+  margin: 0;
+}
+
 p {
   margin: 0;
   font-weight: 300;
   font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
 }
 
 /*Header*/
@@ -42,7 +51,6 @@ header {
   padding: 1rem;
   color: #353535;
 }
-
 .recherche_bar p {
   font-weight: 500;
   font-size: 16px;
@@ -52,16 +60,15 @@ header {
 .info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
   gap: 20px;
+  background-color: #F7F7F7;
+  padding-bottom: 40px;
 }
-
 .info p {
   color: #353535;
 }
-
 .info button {
   width: 218px;
   height: 50px;
@@ -76,10 +83,109 @@ header {
   font-size: 16px;
   transition: transform 200ms;
 }
-
 .info button:hover {
   transform: scale(1.02);
   opacity: 0.9;
+}
+
+/*couleurs*/
+.fonctionnement {
+  counter-reset: steps;
+  padding: 1rem;
+}
+.fonctionnement ol {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media (min-width: 768px) {
+  .fonctionnement ol {
+    flex-direction: row;
+  }
+}
+.fonctionnement li {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background-color: #f7f7f7;
+  gap: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 1rem 2rem;
+  list-style-type: none;
+}
+.fonctionnement li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  color: white;
+  background-color: #9356DC;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -1rem;
+}
+.fonctionnement li i {
+  color: #7E7E7E;
+}
+.fonctionnement li .fa-store {
+  color: #9356DC;
+}
+
+.restaurants {
+  background-color: #F7F7F7;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.restaurants .new {
+  position: relative;
+}
+.restaurants .new::before {
+  content: "Nouveau";
+  position: absolute;
+  color: #1b6150;
+  background: #99E2D0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 29px;
+  right: 1rem;
+  top: 1rem;
+}
+.restaurants img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.restaurants .card {
+  height: 24%;
+  width: 100%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+.restaurants .card_content {
+  padding: 10px 0 10px 20px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */
