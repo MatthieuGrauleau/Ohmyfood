@@ -3,6 +3,8 @@
 @import "./sass/layouts/header";
 @import "./sass/pages/homepage";
 @import"./sass/utils/variables";
+@import"./sass/layouts/footer";
+@import"./sass/pages/restaurants";
 
 
 .fonctionnement{
@@ -115,29 +117,5 @@
         right: 2rem;
     }
 
-footer{
-    background: #353535;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    padding-left: 1rem;
-    h2{
-        font-family: "shrikhand";
-        font-weight: 400;
-        font-size: 18px;
-    }
-    ul{
-        list-style-type: none;  
-        padding: 0; 
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-       & li{ display: flex;
-        gap: 15px;
-        }
-    }
-}
-a .fa-plein {
-    color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-}
+
 
