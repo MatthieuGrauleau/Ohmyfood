@@ -1,3 +1,11 @@
+@import"../utils/mixins";
+
+#pages-restaurants{
+    header::before{
+        @include arrow-left;
+    }
+}
+
 img{
     width: 100%;
     height: 275px;
@@ -9,29 +17,92 @@ img{
     border-radius: 1rem 1rem 0rem 0rem;
     margin-top: -3rem;
     position: relative;
+    overflow: hidden;
     & .plats{display: flex;
         flex-direction: column;
         gap: 10px;
+        overflow: hidden;
         & h2{
             font-weight: 300;
             font-size: 16px;
             text-transform: uppercase;
             border-bottom: 3px solid #99E2D0;
+            
         }
         &_cards{
             background: #FFFFFF;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             border-radius: 1rem 1rem 1rem 1rem;
             box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-            padding: 15px;
             gap: 5px;
-          
+            align-items:flex-end;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            animation: appear 1s both;
+            @for $i from 2 through 4 {
+                &:nth-child(#{$i}) {
+                    animation-delay: 100ms * $i;
+                }}
+            &:hover{
+                cursor: pointer;
+            }
+            &:hover .plats_cards_check {
+                margin-right: 0;
+            }
+            &_check{
+                background-color: $tertiary-color;
+                margin-right: -4rem;
+                border-radius: 0 1rem 1rem 0;
+                height: 100%;
+                transition: margin-right 0.5s;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                width: 60px;
+                height: 69px;
+                & i{
+                    background: white;
+                    border-radius: 1rem;
+                    aspect-ratio: 1;
+                    width: 2rem;
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    color: $tertiary-color;
+                   
+                }
+            }
+            &_txt{
+                padding: 15px;
+                overflow: hidden;
+                & p,h3{
+                    white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                }
+            }
             & p{
                 font-size: 15px;
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            }
-            
+                
+            } 
         }
     }
 }
+.prix{
+    margin-left: auto;
+    padding: 15px 1rem 15px 15px;
+    font-weight: 900;
+    color: #353535;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+button{
+    @include button;
+}
+
