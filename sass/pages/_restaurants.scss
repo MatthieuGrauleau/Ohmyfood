@@ -18,6 +18,27 @@ img{
     margin-top: -3rem;
     position: relative;
     overflow: hidden;
+    &::before{
+        @include heart;
+        right: 5rem;
+        top: 2rem;
+     }
+     &::after{
+         @include heart;
+         @include linearGradient;
+         opacity: 0;
+         font-weight: 900;
+         -webkit-text-fill-color: transparent; 
+         -webkit-background-clip: text;  
+         background-clip: text;  
+         top: 2rem;   
+         right: 5rem;        
+     }
+     &:hover::after{
+         opacity: 1;
+         top: 2rem;
+         right: 5rem;
+     }
     & .plats{display: flex;
         flex-direction: column;
         gap: 10px;
@@ -26,8 +47,12 @@ img{
             font-weight: 300;
             font-size: 16px;
             text-transform: uppercase;
+            margin-bottom: 0;
+             
+        }
+        & .green-border{
             border-bottom: 3px solid #99E2D0;
-            
+            width: 2.5rem;
         }
         &_cards{
             background: #FFFFFF;
@@ -44,7 +69,8 @@ img{
             @for $i from 2 through 4 {
                 &:nth-child(#{$i}) {
                     animation-delay: 100ms * $i;
-                }}
+                }
+            }
             &:hover{
                 cursor: pointer;
             }
@@ -70,8 +96,7 @@ img{
                     justify-content: center;
                     align-items: center;
                     display: flex;
-                    color: $tertiary-color;
-                   
+                    color: $tertiary-color; 
                 }
             }
             &_txt{
