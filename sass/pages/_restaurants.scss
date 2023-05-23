@@ -4,12 +4,20 @@
     header::before{
         @include arrow-left;
     }
+    main{
+        @media (min-width: 769px){
+            padding: 0 180px 0 180px;
+        }
+    }
 }
 
 img{
     width: 100%;
     height: 275px;
     object-fit: cover;
+    @media (min-width: 769px){
+        height: 383px;
+    }
 }
 .menu{
     padding: 0.7rem;
@@ -18,6 +26,12 @@ img{
     margin-top: -3rem;
     position: relative;
     overflow: hidden;
+    @media (min-width: 769px){
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 1rem 180px 1rem 180px;
+    }
     &::before{
         @include heart;
         right: 5rem;

@@ -114,6 +114,14 @@ footer {
   color: white;
   padding-left: 1rem;
 }
+@media (min-width: 769px) {
+  footer {
+    flex-direction: row-reverse;
+    gap: 16px;
+    padding: 30px 25px;
+    align-items: center;
+  }
+}
 footer h2 {
   font-family: "shrikhand";
   font-weight: 400;
@@ -125,6 +133,12 @@ footer ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+@media (min-width: 769px) {
+  footer ul {
+    flex-direction: row;
+    gap: 10px;
+  }
 }
 footer ul li {
   display: flex;
@@ -160,11 +174,21 @@ footer ul li a {
   top: 50%;
   transform: translateY(-50%);
 }
+@media (min-width: 769px) {
+  #pages-restaurants main {
+    padding: 0 180px 0 180px;
+  }
+}
 
 img {
   width: 100%;
   height: 275px;
   object-fit: cover;
+}
+@media (min-width: 769px) {
+  img {
+    height: 383px;
+  }
 }
 
 .menu {
@@ -174,6 +198,14 @@ img {
   margin-top: -3rem;
   position: relative;
   overflow: hidden;
+}
+@media (min-width: 769px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 1rem 180px 1rem 180px;
+  }
 }
 .menu::before {
   display: inline-block;
@@ -358,6 +390,11 @@ button:hover {
   counter-reset: steps;
   padding: 1rem;
 }
+@media (min-width: 769px) {
+  .fonctionnement {
+    padding: 50px 180px 50px 180px;
+  }
+}
 .fonctionnement ol {
   display: flex;
   flex-direction: column;
@@ -381,6 +418,11 @@ button:hover {
   line-height: 19px;
   padding: 1rem 2rem;
   list-style-type: none;
+}
+@media (min-width: 769px) {
+  .fonctionnement li {
+    width: 30%;
+  }
 }
 .fonctionnement li::before {
   content: counter(steps);
@@ -411,6 +453,25 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 18px;
+}
+@media (min-width: 769px) {
+  .restaurants {
+    padding: 0 180px 30px 180px;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+}
+@media (min-width: 769px) {
+  .restaurants a {
+    width: 45%;
+  }
+}
+@media (min-width: 769px) {
+  .restaurants h2 {
+    width: 100%;
+  }
 }
 .restaurants .new {
   position: relative;
