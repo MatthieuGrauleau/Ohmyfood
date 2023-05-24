@@ -31,3 +31,62 @@
          @include button;
      }
  }
+
+ /*Fonctionnement*/
+ .fonctionnement{
+    counter-reset: steps;
+    padding: 1rem;
+    @media (min-width: 769px){
+        padding: 50px 180px 50px 180px;
+    }
+    & ol{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        @media (min-width: 768px){
+            flex-direction: row;
+        }
+        
+    }
+    & li{
+        @media (min-width: 769px){
+            width: 30%;
+        }
+        &::before{
+            content: counter(steps);
+            counter-increment: steps;
+            color: white;
+            background-color: #9356DC;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -1rem;
+            
+        }
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        background-color: #f7f7f7;
+        gap: 10px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        padding: 1rem 2rem;
+        list-style-type: none;
+        & i{
+            color: #7E7E7E;
+        }
+        & .fa-store{
+            color: #9356DC;
+        }
+    }
+    
+}
