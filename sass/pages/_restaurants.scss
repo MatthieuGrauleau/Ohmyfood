@@ -35,7 +35,7 @@ img{
     }
     &::before{
         @include heart;
-        right: 5rem;
+        right: 2rem;
         top: 2rem;
      }
      &::after{
@@ -47,12 +47,12 @@ img{
          -webkit-background-clip: text;  
          background-clip: text;  
          top: 2rem;   
-         right: 5rem;        
+         right: 2rem;        
      }
      &:hover::after{
          opacity: 1;
          top: 2rem;
-         right: 5rem;
+         right: 2rem;
      }
     & .plats{display: flex;
         flex-direction: column;
@@ -81,7 +81,7 @@ img{
             white-space: nowrap;
             text-overflow: ellipsis;
             animation: appear 1s both;
-            @for $i from 2 through 5 {
+            @for $i from 2 through 8 {
                 &:nth-child(#{$i}) {
                     animation-delay: 100ms * $i;
                 }
@@ -106,7 +106,7 @@ img{
                 & i{
                     background: white;
                     border-radius: 1rem;
-                    aspect-ratio: 1;
+                    height: 2rem;
                     width: 2rem;
                     justify-content: center;
                     align-items: center;
@@ -130,6 +130,17 @@ img{
             } 
         }
     }
+    @media (min-width: 769px){
+        &::before{
+            right: 5rem;
+         }
+         &::after{
+             right: 5rem;        
+         }
+         &:hover::after{
+             right: 5rem;
+         }
+        }
 }
 .prix{
     margin-left: auto;
@@ -162,6 +173,8 @@ button{
     & a{
         @media (min-width: 769px){
             width: 45%;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 15px; 
         }
     }
     & h2{
@@ -211,6 +224,7 @@ button{
             position: relative;
             &::before{
                @include heart
+               
             }
             &::after{
                 @include heart;

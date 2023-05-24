@@ -68,6 +68,7 @@ header {
     opacity: 1;
   }
 }
+/*couleurs*/
 /*bar de recherche*/
 .recherche_bar {
   display: flex;
@@ -155,6 +156,9 @@ header {
     width: 30%;
   }
 }
+.fonctionnement li:hover i {
+  color: #9356DC;
+}
 .fonctionnement li::before {
   content: counter(steps);
   counter-increment: steps;
@@ -173,9 +177,6 @@ header {
 }
 .fonctionnement li i {
   color: #7E7E7E;
-}
-.fonctionnement li .fa-store {
-  color: #9356DC;
 }
 
 /*couleurs*/
@@ -328,7 +329,7 @@ img {
   -webkit-background-clip: text;
   opacity: 1;
   transition: all 200ms ease-in-out;
-  right: 5rem;
+  right: 2rem;
   top: 2rem;
 }
 .menu::after {
@@ -357,12 +358,12 @@ img {
   -webkit-background-clip: text;
   background-clip: text;
   top: 2rem;
-  right: 5rem;
+  right: 2rem;
 }
 .menu:hover::after {
   opacity: 1;
   top: 2rem;
-  right: 5rem;
+  right: 2rem;
 }
 .menu .plats {
   display: flex;
@@ -405,6 +406,15 @@ img {
 .menu .plats_cards:nth-child(5) {
   animation-delay: 500ms;
 }
+.menu .plats_cards:nth-child(6) {
+  animation-delay: 600ms;
+}
+.menu .plats_cards:nth-child(7) {
+  animation-delay: 700ms;
+}
+.menu .plats_cards:nth-child(8) {
+  animation-delay: 800ms;
+}
 .menu .plats_cards:hover {
   cursor: pointer;
 }
@@ -426,7 +436,7 @@ img {
 .menu .plats_cards_check i {
   background: white;
   border-radius: 1rem;
-  aspect-ratio: 1;
+  height: 2rem;
   width: 2rem;
   justify-content: center;
   align-items: center;
@@ -445,6 +455,17 @@ img {
 .menu .plats_cards p {
   font-size: 15px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+@media (min-width: 769px) {
+  .menu::before {
+    right: 5rem;
+  }
+  .menu::after {
+    right: 5rem;
+  }
+  .menu:hover::after {
+    right: 5rem;
+  }
 }
 
 .prix {
@@ -499,6 +520,8 @@ button:hover {
 @media (min-width: 769px) {
   .restaurants a {
     width: 45%;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
   }
 }
 @media (min-width: 769px) {
@@ -649,7 +672,7 @@ button:hover {
   place-items: center;
 }
 .loader img {
-  width: 400px;
+  width: 300px;
   object-fit: contain;
   animation: spin 3s;
 }
