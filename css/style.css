@@ -394,6 +394,12 @@ img {
   text-overflow: ellipsis;
   animation: appear 1s both;
 }
+.menu .plats_cards .prix {
+  margin-left: auto;
+  padding: 15px 1rem 15px 15px;
+  font-weight: 900;
+  color: #353535;
+}
 .menu .plats_cards:nth-child(2) {
   animation-delay: 200ms;
 }
@@ -451,10 +457,11 @@ img {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  font-weight: 500;
 }
 .menu .plats_cards p {
   font-size: 15px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 300;
 }
 @media (min-width: 769px) {
   .menu::before {
@@ -466,13 +473,6 @@ img {
   .menu:hover::after {
     right: 5rem;
   }
-}
-
-.prix {
-  margin-left: auto;
-  padding: 15px 1rem 15px 15px;
-  font-weight: 900;
-  color: #353535;
 }
 
 .button {

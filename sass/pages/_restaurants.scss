@@ -81,6 +81,12 @@ img{
             white-space: nowrap;
             text-overflow: ellipsis;
             animation: appear 1s both;
+            & .prix{
+                margin-left: auto;
+                padding: 15px 1rem 15px 15px;
+                font-weight: 900;
+                color: #353535;
+            }
             @for $i from 2 through 8 {
                 &:nth-child(#{$i}) {
                     animation-delay: 100ms * $i;
@@ -121,11 +127,12 @@ img{
                     white-space: nowrap;
                 text-overflow: ellipsis;
                 overflow: hidden;
+                font-weight: 500;
                 }
             }
             & p{
                 font-size: 15px;
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-weight: 300;
                 
             } 
         }
@@ -142,12 +149,7 @@ img{
          }
         }
 }
-.prix{
-    margin-left: auto;
-    padding: 15px 1rem 15px 15px;
-    font-weight: 900;
-    color: #353535;
-}
+
 .button{
     display: flex;
     justify-content: center;
