@@ -74,7 +74,7 @@ img{
             display: flex;
             flex-direction: row;
             border-radius: 1rem 1rem 1rem 1rem;
-            box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
             gap: 5px;
             align-items:flex-end;
             overflow: hidden;
@@ -108,7 +108,7 @@ img{
                 align-items: center;
                 display: flex;
                 width: 60px;
-                height: 69px;
+                height: 70px;
                 & i{
                     background: white;
                     border-radius: 1rem;
